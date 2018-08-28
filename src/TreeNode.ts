@@ -1,13 +1,19 @@
-export default class TreeNode {
-    public left: TreeNode | null = null;
-    public right: TreeNode | null = null;
-    public value: number = 0;
+export default class TreeNode<T> {
+    public left: TreeNode<T> | null = null;
+    public right: TreeNode<T> | null = null;
+    public value: T;
 
-    constructor(value: number, left: TreeNode | null = null, right: TreeNode | null = null) {
+    constructor(value: T) {
         this.value = value;
-        if (left && right) {
-            this.left = left;
-            this.right = right;
-        }
+    }
+
+    public addLeft(left: TreeNode<T> | null): TreeNode<T> {
+        this.left = left;
+        return this;
+    }
+
+    public addRight(right: TreeNode<T> | null): TreeNode<T> {
+        this.right = right;
+        return this;
     }
 }
