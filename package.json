@@ -1,0 +1,20 @@
+{
+  "name": "binarytree",
+  "version": "1.0.0",
+  "description": "TypeScript implementation of Binary Tree inversion",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --port 3002"
+  },
+  "author": "Olzhas Akhmetkhan",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-loader": "^4.5.0",
+    "tslint": "^5.11.0",
+    "tslint-webpack-plugin": "^1.2.2",
+    "typescript": "^3.0.1",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.6"
+  }
+}
