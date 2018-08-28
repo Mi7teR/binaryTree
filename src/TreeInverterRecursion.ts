@@ -1,14 +1,14 @@
 import TreeNode from './TreeNode';
-export default class TreeInverterRecursion {
-    public originalTree: TreeNode<number>;
-    public invertedTree?: TreeNode<number> | null = null;
+export default class TreeInverterRecursion<T> {
+    public originalTree: TreeNode<T>;
+    public invertedTree?: TreeNode<T> | null = null;
 
-    constructor(tree: TreeNode<number>) {
+    constructor(tree: TreeNode<T>) {
         this.originalTree = tree;
         this.invertedTree = this.invert(tree);
     }
 
-    private invert(tree: TreeNode<number> | null): TreeNode<number> | null {
+    private invert(tree: TreeNode<T> | null): TreeNode<T> | null {
         if (tree) {
             const left = tree.left;
             const right = tree.right;
