@@ -8,9 +8,7 @@ export default class TreeInverterIterative<T> {
 
     constructor(tree: TreeNode<T>) {
         this.originalTree = tree;
-        this.invertedTree = new TreeNode(tree.value);
-        this.invertedTree.left = tree.left;
-        this.invertedTree.right = tree.right;
+        this.invertedTree = new TreeNode(tree.value).addLeft(tree.left).addRight(tree.right);
         this.inverseIterative();
     }
 
